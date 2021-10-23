@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background: #B3AFB3;
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #B3AFB3;
+}
+::-webkit-scrollbar-track{
+    border-radius: 0px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+/* Root */
+
+:root {
+    --bg-color: rgb(40,40,40);
+    --text-color: rgb(169,183,193);
+    --typewriterSpeed: 6s;
+    --typewriterCharacters: 24;
+}
+
+body {
+    color: var(--text-color);
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: var(--bg-color);
+}
+
+section {
+    min-height: 100vh;
+}
+
+#cover {
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    width: max-content;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.cursor {
+    animation: animate-cursor 1s linear infinite;
+}
+
+@keyframes animate-cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+section {
+    padding: 0 300px;
+    margin-bottom: 200px;
+}
