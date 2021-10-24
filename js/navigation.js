@@ -5,8 +5,9 @@ function gotoCover() {
     location.href='#cover';
 
     /* Restart the animation */
-    coverMain.reset();
+    coverMain.destroy();
     coverSubtitle.destroy();
+    coverAnimation();
 }
 
 function gotoWhoAmI() {
@@ -14,7 +15,9 @@ function gotoWhoAmI() {
     location.href='#whoAmI';
 
     /* Start typing animation */
-    whoAmITitle.reset();
+    whoAmITitle.destroy();
     whoAmIDescription.destroy();
-
+    competenceTitle.destroy();
+    competencesDescription.destroy();
+    whoAmIAnimation();
 }
