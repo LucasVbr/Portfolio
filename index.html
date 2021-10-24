@@ -1,25 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Lucàs Vabre - Homepage</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- Cover -->
-<section id="cover">
-    <h1 class="typed-260">Hello, my name is Lucàs.</h1>
-    <p class="subtitle">"I am a student in computer development"</p>
-</section>
+<div class="container">
+    <div id="cover">
+        <h1><span id="cover-main"></span></h1>
+        <p class="subtitle"><span id="cover-subtitle"></span></p>
+        <div id="cover-buttons" class="row hidden-buttons">
+            <div class="col-3">
+                <input onclick="gotoCover()" class="btn btn-outline-primary btn-lg" value="Home" type="button">
+            </div>
+            <div class="col-3">
+                <input onclick="gotoWhoAmI()" class="btn btn-outline-primary btn-lg" value="Who am I ?" type="button">
+            </div>
+            <div class="col-3"><input class="btn btn-outline-primary btn-lg" value="My Works" type="button"></div>
+            <div class="col-3"><input class="btn btn-outline-primary btn-lg" value="Contact Me" type="button"></div>
+        </div>
+    </div>
 
-<section>
-    <h2 class="typed-250"># Presentation</h2>
-</section>
+    <div id="whoAmI"class="min-vh-100">
+        <h2 style="padding-top: 25vh; color:var(--primary)"><span id="whoAmI-title"></span></h2>
+        <p><span id="whoAmI-description"></span></p>
+    </div>
+</div>
 
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS, then Typed.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script src="./js/typed.js"></script>
+
+<!-- My Scripts -->
 <script src="./js/script.js"></script>
+<script src="./js/typing-animations.js"></script>
+<script src="./js/navigation.js"></script>
 
 </body>
 </html>

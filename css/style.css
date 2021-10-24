@@ -1,7 +1,7 @@
+/* Import font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
-
-/* Scroll Bar */
+/* Hide Scroll Bar */
 ::-webkit-scrollbar{
     width: 5px;
     height: 5px;
@@ -14,12 +14,11 @@
     background: #B3AFB3;
 }
 ::-webkit-scrollbar-track{
-    border-radius: 0px;
-    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 0 #F0F0F0;
 }
 
-/* Root */
-
+/* Define variables */
 :root {
     --bg-color: rgb(40,40,40);
     --text-color: rgb(169,183,193);
@@ -27,21 +26,24 @@
     --typewriterCharacters: 24;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-color);
     margin: 0;
     font-family: 'Roboto Mono', monospace;
     background: var(--bg-color);
-}
-
-section {
-    min-height: 100vh;
+    height: 100%;
+    overflow-y: hidden;
 }
 
 #cover {
     display: grid;
     place-content: center;
     text-align: center;
+    min-height: 100vh
 }
 
 h1 {
@@ -56,23 +58,33 @@ h1 {
     font-weight: 400;
 }
 
-.cursor {
-    animation: animate-cursor 1s linear infinite;
+#cover-buttons {
+    position: fixed;
+    text-align: center;
 }
 
-@keyframes animate-cursor {
+#cover-buttons > div > input {
+    margin: 0 50px ;
+    text-align: center;
+}
+
+.hidden-buttons {
+    visibility: hidden;
+    margin-top: 75px;
+}
+
+.showed-buttons {
+    animation: 3s showButtons ease-out;
+    margin-top: 50px;
+}
+
+@keyframes showButtons {
     0% {
         opacity: 0;
+        margin-top: 75px;
     }
-    50% {
+    100% {
         opacity: 1;
+        margin-top: 50px;
     }
-    100%{
-        opacity: 0;
-    }
-}
-
-section {
-    padding: 0 300px;
-    margin-bottom: 200px;
 }
