@@ -7,8 +7,8 @@ class Home {
 
         this.SUBTITLE_ELEMENT = "home-subtitle";
         this.SUBTITLE_TEXT = [
-            "I am a student.",
-            "I am^100 passionate about IT!",
+            "I am passionate about IT!",
+            "I am^100 curious.",
             "I am^700 a <span style='color:var(--primary)'>developer</span>."
         ];
 
