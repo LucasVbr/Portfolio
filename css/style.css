@@ -2,92 +2,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 /* Hide Scroll Bar */
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #B3AFB3;
     border-radius: 30px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #B3AFB3;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     border-radius: 0;
     box-shadow: inset 0 0 0 0 #F0F0F0;
 }
 
 /* Define variables */
 :root {
-    --bg-color: rgb(40,40,40);
-    --text-color: rgb(169,183,193);
-    --typewriterSpeed: 6s;
-    --typewriterCharacters: 24;
+    --bg-color: rgb(40, 40, 40);
+    --text-color: rgb(169, 183, 193);
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    color: var(--text-color);
-    margin: 0;
     font-family: 'Roboto Mono', monospace;
+
+    margin: 0;
     background: var(--bg-color);
-    height: 100%;
+    color: var(--text-color);
+
     overflow-y: hidden;
+    font-size: 1.2em;
 }
 
-#cover {
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: Consolas, serif;
+    line-height: 1.2em;
+    font-size: 1.3em;
+}
+
+nav span a {
+    color: var(--text-color);
+}
+
+nav span a:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#home {
     display: grid;
     place-content: center;
     text-align: center;
     min-height: 100vh
 }
 
-h1 {
+#home h1 {
     font-size: clamp(1rem, 3vw + 1rem, 4rem);
     position: relative;
     width: max-content;
 }
 
-.subtitle {
+#home .subtitle {
     font-size: 2rem;
     font-weight: 400;
 }
 
-#cover-buttons {
-    position: fixed;
-    text-align: center;
+.section {
+    min-height: 100vh;
+    padding-top: 25vh;
 }
 
-#cover-buttons > div > input {
-    margin: 0 50px ;
-    text-align: center;
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
-.hidden-buttons {
+hr {
+    background-color: var(--text-color);
+}
+
+/* Hide cursor of typed */
+.hide-cursor > .typed-cursor {
     visibility: hidden;
-    margin-top: 75px;
 }
 
-.showed-buttons {
-    animation: 3s showButtons ease-out;
-    margin-top: 50px;
-}
-
-p {
-    font-size: 1.2em;
-}
-
-@keyframes showButtons {
-    0% {
-        opacity: 0;
-        margin-top: 75px;
-    }
-    100% {
-        opacity: 1;
-        margin-top: 50px;
-    }
+.transparent {
+    color: transparent;
 }

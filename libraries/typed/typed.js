@@ -804,7 +804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  stringsElement: null,
 	
 	  /**
-	   * @property {number} typeSpeed type speed in milliseconds
+	   * @property {number} TYPE_SPEED type speed in milliseconds
 	   */
 	  typeSpeed: 0,
 	
@@ -814,7 +814,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  startDelay: 0,
 	
 	  /**
-	   * @property {number} backSpeed backspacing speed in milliseconds
+	   * @property {number} BACK_SPEED backspacing speed in milliseconds
 	   */
 	  backSpeed: 0,
 	

@@ -4,62 +4,110 @@
     <title>Lucàs Vabre - Homepage</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
 <div class="container">
-    <div id="cover">
-        <h1><span id="cover-main"></span></h1>
-        <p class="subtitle"><span id="cover-subtitle"></span></p>
-        <div id="cover-buttons" class="row hidden-buttons">
-            <div class="col-3">
-                <input onclick="gotoCover()" class="btn btn-outline-primary btn-lg" value="Home" type="button">
-            </div>
-            <div class="col-3">
-                <input onclick="gotoWhoAmI()" class="btn btn-outline-primary btn-lg" value="Who am I ?" type="button">
-            </div>
-            <div class="col-3"><input class="btn btn-outline-primary btn-lg" value="My Works" type="button"></div>
-            <div class="col-3"><input class="btn btn-outline-primary btn-lg" value="Contact Me" type="button"></div>
-        </div>
+
+    <nav class="noselect">
+        <!-- TODO Generate This -->
+        <span>┌───Menu────┐</span><br>
+        <span>│<a id="nav-home" href="#home">Home&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>│</span><br>
+        <span>│<a id="nav-who" href="#who">Who Am I ?&nbsp;</a>│</span><br>
+        <span>│<a id="nav-competences" href="#competences">Competences</a>│</span><br>
+        <span>│<a id="nav-works" href="#works">Works&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>│</span><br>
+        <span>│<a id="nav-contact" href="#contact">Contact&nbsp;&nbsp;&nbsp;&nbsp;</a>│</span><br>
+        <span>│<a id="" href="">Options&nbsp;&nbsp;&nbsp;&nbsp;</a>│</span><br> <!-- TODO Light Mode + FR mode -->
+        <span>└───────────┘</span><br>
+    </nav>
+
+    <!-- Section: Home -->
+    <div id="home">
+        <h1 id="home-title"></h1>
+        <p id="home-subtitle" class="subtitle"></p>
     </div>
 
-    <div id="whoAmI" class="min-vh-100" style="padding-top: 25vh">
-        <h2 style="color:var(--primary)"><span id="whoAmI-title"></span></h2>
-        <p><span id="whoAmI-description"></span></p>
+    <!-- Section: Who Am I -->
+    <div id="who" class="section">
 
-        <br>
-        <br>
+        <!-- Title -->
+        <h2># Who Am I ?</h2>
 
         <div class="row">
-            <div class="col-6">
-                <h3 style="color: var(--info)"><span id="competence-title"></span></h3>
-                <p>
-                    <span id="competence-desc"></span>
-                </p>
+            <!-- Image -->
+            <div class="col-3">
+                <img style="border-radius: 50%" src="./img/lucas.jpg" alt="" width="200px">
             </div>
-<!--            <div class="col-6">-->
-<!--                <h3 style="color: var(&#45;&#45;info)">## Currently learning</h3>-->
-<!--                <p>-->
-<!--                    <span>Typed.JS</span><br>-->
-<!--                    <span>jQuery</span>-->
-<!--                </p>-->
-<!--            </div>-->
+
+            <!-- Description -->
+            <div class="col-9">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda consectetur corporis distinctio ducimus fugit illum impedit, incidunt minima nam, necessitatibus nesciunt non obcaecati quia quidem recusandae temporibus veniam! Expedita.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <!-- Chronology -->
         </div>
     </div>
 
-    <div id="myWorks">
+    <!-- Section: Competences -->
+    <div id="competences" class="section">
+
+        <!-- Title -->
+        <h2># Competences</h2>
+
+        <!-- Description -->
+        <div class="row">
+            <div class="col-6">
+                <h3>## Programming</h3>
+            </div>
+            <div class="col-6">
+                <h3>## Organisation</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Works -->
+    <div id="works" class="section">
+        <!-- Title -->
+        <h2># Works</h2>
+
+        <!-- Table -->
+        <div class="row">
+            <div class="col-4">a</div>
+            <div class="col-4">b</div>
+            <div class="col-4">c</div>
+        </div>
+        <div class="row">
+            <div class="col-4">d</div>
+            <div class="col-4">e</div>
+            <div class="col-4">f</div>
+        </div>
+        <div class="row">
+            <div class="col-4">g</div>
+            <div class="col-4">h</div>
+            <div class="col-4">i</div>
+        </div>
 
     </div>
 
-    <div id="contactMe">
+    <!-- Section: Contact -->
+    <div id="contact" class="section">
+        <!-- Title -->
+        <h2># Contact</h2>
+
+        <!-- Contact Form -->
+
+
+        <!-- Social networks -->
 
     </div>
 </div>
@@ -70,18 +118,27 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-<script src="./js/typed.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>-->
 
 <!-- My Scripts -->
-<script src="./js/script.js"></script>
-<script src="./js/typing-animations.js"></script>
-<script src="./js/navigation.js"></script>
+<script src="./js/typer.js"></script>
+<script src="./js/tools/tool.js"></script>
+<script src="./js/tools/bar.js"></script>
+<script src="./js/tools/menu.js"></script>
+
+<script src="./js/nav.js"></script>
+<script src="./js/main.js"></script>
+<script src="js/sections/home.js"></script>
 
 </body>
 </html>
