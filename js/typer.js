@@ -11,7 +11,7 @@ function generateElement(element, parentId) {
 }
 
 class Typer {
-    constructor(elementId, textArray, onCompleteTyped, typeSpeed=TYPE_SPEED, backSpeed=BACK_SPEED) {
+    constructor(elementId, textArray, onCompleteTyped, typeSpeed=TYPE_SPEED, backSpeed=BACK_SPEED, doHideCursor=false) {
         this.elementId = elementId;
         this.textArray = textArray;
 
@@ -21,36 +21,35 @@ class Typer {
         this.typeSpeed = typeSpeed;
         this.backSpeed = backSpeed;
 
-        this.completed = false;
+        this.doHideCursor = doHideCursor;
+
+        this.startAnimation = false;
     }
 
     start() {
-        if (this.typed !== undefined) {
-            this.reset();
-        }
+        if (!this.startAnimation) {
+            this.startAnimation = true;
+            this.typed = new Typed(`#${this.textElementId}`, {
+                strings: this.textArray,
+                typeSpeed: this.typeSpeed,
+                backSpeed: this.backSpeed,
+                startDelay: START_DELAY,
+                onComplete: () => {
+                    if (this.doHideCursor) {
+                        this.hideCursor();
+                    }
 
-        this.typed = new Typed(`#${this.textElementId}`, {
-            strings: this.textArray,
-            typeSpeed: this.typeSpeed,
-            backSpeed: this.backSpeed,
-            startDelay: START_DELAY,
-            onComplete: () => {
-                this.completed = true;
-                if (this.onCompleteTyped !== undefined) {
-                    this.hideCursor();
-                    this.onCompleteTyped.start();
+                    if (this.onCompleteTyped !== undefined) {
+                        this.hideCursor();
+
+                        if(this.onCompleteTyped instanceof Typer) {
+                            this.onCompleteTyped.start();
+                        } else {
+                            this.onCompleteTyped.call()
+                        }
+                    }
                 }
-            }
-        });
-    }
-
-    showCursor() {
-        let element = $(`#${this.elementId}`)[0];
-
-        if (element.className !== undefined
-            && element.classList.contains(HIDDEN_CLASS)) {
-
-            element.classList.remove(HIDDEN_CLASS)
+            });
         }
     }
 
@@ -61,14 +60,6 @@ class Typer {
             element.classList.add(HIDDEN_CLASS);
         } else {
             element.className = HIDDEN_CLASS;
-        }
-    }
-
-    reset() {
-        this.showCursor();
-        this.typed.destroy();
-        if (this.onCompleteTyped !== undefined && this.completed) {
-            this.onCompleteTyped.typed.destroy();
         }
     }
 }

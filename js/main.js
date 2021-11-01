@@ -1,14 +1,16 @@
 $('document').ready(() => {
-    /* Initialize */
-    const HOME = new Home();
+    location.href = "#home";
+
+    HOME = new Home();
+    WHO = new Who();
+    COMPETENCES = new Competences();
+    WORKS = new Works();
+    CONTACT = new Contact();
+    NAVIGATION = new Navigation();
 
     /* Start */
-    HOME.start();
-
-    /* Menu */
-    $("#nav-home")[0].addEventListener('click', {
-        handleEvent: () => {
-            HOME.start()
-        }
-    })
+    NAVIGATION.start();
 });
+
+
+

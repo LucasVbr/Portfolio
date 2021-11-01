@@ -19,7 +19,7 @@ class Bar {
     }
 
     generateUnits(nbUnits) {
-        return duplicateChar(nbUnits, this.BAR_UNIT);
+        return duplicateChar(nbUnits+1, this.BAR_UNIT);
     }
 
     transparentSpan(content) {

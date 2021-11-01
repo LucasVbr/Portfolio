@@ -1,0 +1,6 @@
+let NAVIGATION;
+let HOME;
+let WHO;
+let COMPETENCES;
+let WORKS;
+let CONTACT;
