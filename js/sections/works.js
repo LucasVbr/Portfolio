@@ -18,7 +18,6 @@ class Works {
         for (let i = 0; i < 6 ; i++) {
             $(".work")[i].classList.add("load");
         }
-
         WORKS.MORE_TYPER.start()
     }
 }

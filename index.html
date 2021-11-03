@@ -38,12 +38,12 @@
         <!-- Content -->
         <div class="row mt-5">
             <!-- Image -->
-            <div class="col col-md-3 col-sm-12 col-12">
-                <img src="./img/profile-square.jpg" id="who-photo" class="float-right" alt="Profile Picture of Lucàs">
+            <div class="col col-md-4 col-sm-12 col-12 text-center">
+                <img src="./img/profile-square.jpg" id="who-photo" class="float-lg-left float-sm-none" alt="Profile Picture of Lucàs">
             </div>
 
             <!-- Description -->
-            <div class="col col-md-9 col-sm-12 col-12">
+            <div class="col col-md-8 col-sm-12 col-12">
                 <p id="who-presentation"></p>
                 <p id="who-love"></p>
             </div>
@@ -74,7 +74,7 @@
 
         <!-- Table -->
         <div class="row mt-5">
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/interpreterLir.jpg" class="load" alt="">
                 </div>
@@ -84,7 +84,7 @@
                     <a href="https://github.com/LucasVbr/InterpreteurLIR">See more</a>
                 </div>
             </div>
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/gameLib.jpg" class="load" alt="">
                 </div>
@@ -94,7 +94,7 @@
                     <a href="https://github.com/LucasVbr/GameLIB">See more</a>
                 </div>
             </div>
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/passwordGenerator.jpg" class="load" alt="">
                 </div>
@@ -104,9 +104,7 @@
                     <a href="https://github.com/LucasVbr/PasswordGenerator">See more</a>
                 </div>
             </div>
-        </div>
-        <div class="row mt-5">
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/jsTimer.jpg" class="load" alt="">
                 </div>
@@ -116,7 +114,7 @@
                     <a href="https://github.com/LucasVbr/JavascriptTimer">See more</a>
                 </div>
             </div>
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/imgToPdf.jpg" class="load" alt="">
                 </div>
@@ -126,7 +124,7 @@
                     <a href="https://github.com/LucasVbr/ImagesToPDF">See more</a>
                 </div>
             </div>
-            <div class="col-4 work">
+            <div class="col-md-4 col-sm-6 col-12 mt-3 work">
                 <div class="img">
                     <img src="./img/works/pyNotes.jpg" class="load" alt="">
                 </div>
@@ -137,6 +135,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- More -->
         <div class="row mt-5">
             <div class="col-4"></div>
             <div class="col-4 text-center">
@@ -153,52 +153,74 @@
         <h2 id="contact-title" class="text-primary"></h2>
 
         <!-- Contact Form -->
+        <div class="row mt-5">
+            <div class="col-6">
+                <input id="contact-first-name" class="form-control" placeholder="First Name" type="text">
+            </div>
+            <div class="col-6">
+                <input id="contact-last-name" class="form-control" placeholder="Last Name" type="text">
+            </div>
+            <div class="col-12 mt-2">
+                <input id="contact-subject" class="form-control flex-fill" placeholder="Subject" type="text">
+            </div>
+            <div class="col-12 mt-2">
+                <textarea id="contact-message" placeholder="Message" class="form-control flex-fill"
+                          rows="10"></textarea>
+            </div>
 
+            <div class="col-12 text-center mt-5" id="contact-send"></div>
+        </div>
+
+        <hr class="mt-5 hr">
 
         <!-- Social networks -->
-
+        <div class="row mt-5 text-center">
+            <div class="col-4" id="contact-github"></div>
+            <div class="col-4" id="contact-pydefis"></div>
+            <div class="col-4" id="contact-rootme"></div>
+        </div>
     </div>
 </div>
 
 
 <!-- JavaScript Library -->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
+<!-- Popper.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
 
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
-    <!-- Typed.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>-->
+<!-- Typed.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>-->
 
 <!-- My Scripts -->
-    <!-- Tools -->
-    <script src="./js/Initialize.js"></script>
+<!-- Tools -->
+<script src="./js/Initialize.js"></script>
 
-    <script src="./js/typer.js"></script>
-    <script src="./js/tools/tool.js"></script>
-    <script src="./js/tools/bar.js"></script>
+<script src="./js/typer.js"></script>
+<script src="./js/tools/tool.js"></script>
+<script src="./js/tools/bar.js"></script>
 
-    <!-- Build Section -->
-    <script src="./js/sections/navigation.js"></script>
-    <script src="./js/sections/home.js"></script>
-    <script src="./js/sections/who.js"></script>
-    <script src="./js/sections/competences.js"></script>
-    <script src="./js/sections/works.js"></script>
-    <script src="./js/sections/contact.js"></script>
+<!-- Build Section -->
+<script src="./js/sections/navigation.js"></script>
+<script src="./js/sections/home.js"></script>
+<script src="./js/sections/who.js"></script>
+<script src="./js/sections/competences.js"></script>
+<script src="./js/sections/works.js"></script>
+<script src="./js/sections/contact.js"></script>
 
-    <!-- Main Script -->
-    <script src="./js/main.js"></script>
+<!-- Main Script -->
+<script src="./js/main.js"></script>
 
 </body>
 </html>
